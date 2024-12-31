@@ -1,12 +1,12 @@
 import countrydata from '../CountryData'
 import CountryCard from './CountryCard'
 const CountryList = () => {
-    const array = countrydata.map((k, d) => (
-        <div key={d}>
+    const array = countrydata.map((country, index) => (
+        <div key={index}>
             {
-                console.log(k)
+                console.log(country.name.official)
             }
-            <CountryCard />
+            <CountryCard name={country.name.common} />
         </div>
     ))
 
