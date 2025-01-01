@@ -1,20 +1,20 @@
 
-const CountryCard = () => {
+const CountryCard = ({ name, flags, population, Region, Capitals }) => {
     return (
         <>
-            <a className="country-card" href="/country.html?name=Barbados">
-                <img src="https://flagcdn.com/bb.svg" alt="Barbodos" />
+            <a className="country-card" href={`/country.html?name=${name}`}>
+                <img src={flags} alt={name} />
                 <div className="card-text">
-                    <h3 className="card-title">Basrbados</h3>
+                    <h3 className="card-title">{name}</h3>
                     <p>
-                        <b>Populations : </b>2,87,315
+                        <b>Populations : </b>{population}
                     </p>
                     <p>
-                        <b>Region:</b>America
+                        <b>Region:</b>{Region}
                     </p>
                     <p>
-                        <b>Capital:</b>Bridgetown
-                        
+                        <b>Capital:</b>{Capitals}
+
                     </p>
                 </div>
             </a>
