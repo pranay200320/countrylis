@@ -4,8 +4,6 @@ import CountryCard from './CountryCard'
 import axios from 'axios'
 const CountryList = ({ query }) => {
     const [countrydata, setCountryData] = useState([])
-    const [count, setCount] = useState(0)
-
     useEffect(() => {
         const fetchCountrie = async () => {
             try {
@@ -22,9 +20,9 @@ const CountryList = ({ query }) => {
 
     return (
         <>
-            <h1>{count}</h1>
-            <button onClick={() => setCount(count + 1)}>Remove All Data</button>
-            <div className='countries-container'>
+
+            {/* contries-container */}
+            <div className='max-w-[1200px] mt-4 flex gap-16 flex-wrap mx-auto justify-between  md:justify-center '>
 
                 {
                     // query is intial state is empty and evry country containt empty space 

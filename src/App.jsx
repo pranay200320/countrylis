@@ -1,30 +1,20 @@
-import './App.css'
+
+import { Outlet } from 'react-router-dom'
 import Header from './componets/Header'
-import SerchBar from './componets/SearchBar'
-import Select from './componets/Select'
-import CountryList from './componets/CountryList'
-import { useState } from 'react'
 
 function App() {
 
-  const [query, setQuery] = useState('')
 
   return (
     <>
 
 
       <Header />
+      {/* <Outlet /> is a special component from React Router. It renders the child route inside the parent component (App). */}
+      <Outlet />
 
-      <main>
 
-        <div className='search-filter-container'>
 
-          <SerchBar setQuery={setQuery} />
-          <Select />
-        </div>
-        <CountryList query={query} />
-
-      </main>
     </>
   )
 }

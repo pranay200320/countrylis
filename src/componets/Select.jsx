@@ -2,7 +2,8 @@
 const Select = () => {
     return (
         <>
-            <select className="filter-by-region">
+            {/* filter by resion */}
+            <select className="w-[250px] p-4 border-none outline-none shadow-md rounded bg-sky-200 text-[#999]">
                 <option hidden=''>Filter By Region</option>
                 <option value="Africa">Africa</option>
                 <option value="America">America</option>
