@@ -24,6 +24,11 @@ const router = createBrowserRouter([
         path: '/contact',
         element: <div><Contact /></div>
       },
+      {
+        path: '/:country',
+        element: <div><CountryDetail /></div>
+      },
+
     ]
   },
 ])
@@ -32,10 +37,12 @@ createRoot(document.getElementById('root')).render(
 
   // its identfy the dangers librery and life cycle
   // A React tool that helps catch potential errors by running certain parts twice in development 
-  <StrictMode>
+  <>
+    {/* <StrictMode> */}
 
     {/* This connects the router (created earlier) to the app, allowing navigation to work. */}
 
     <RouterProvider router={router} />
-  </StrictMode>
+    {/* </StrictMode> */}
+  </>
 )

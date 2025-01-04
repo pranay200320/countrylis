@@ -35,6 +35,7 @@ const CountryList = ({ query }) => {
                                 population={country.population.toLocaleString('en-IN')}
                                 Region={country.region}
                                 Capitals={country.capital?.[0]} />
+
                         </div>
                     ))
 

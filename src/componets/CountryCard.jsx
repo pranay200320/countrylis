@@ -1,9 +1,10 @@
+import { Link, NavLink } from "react-router-dom"
 
 const CountryCard = ({ name, flags, population, Region, Capitals }) => {
     return (
         <>
             {/* country card */}
-            <a className="inline-block w-[250px] rounded-lg overflow-hidden pb-6 shadow-md transition-all duration-200 ease-in-out bg-white no-underline text-inherit country-card hover:scale-[1.03] hover:shadow-lg " href={`/country?name=${name}`}>
+            <NavLink className="inline-block w-[250px] rounded-lg overflow-hidden pb-6 shadow-md transition-all duration-200 ease-in-out bg-white no-underline text-inherit country-card hover:scale-[1.03] hover:shadow-lg " to={`${name}`}>
                 <img src={flags} alt={name} className='w-full' />
                 <div className="px-4 md:text-sm">
                     <h3 className="text-2xl my-4">{name}</h3>
@@ -18,7 +19,7 @@ const CountryCard = ({ name, flags, population, Region, Capitals }) => {
 
                     </p>
                 </div>
-            </a>
+            </NavLink>
         </>
     )
 }
