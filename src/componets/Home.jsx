@@ -16,7 +16,7 @@ const Home = () => {
                 <div className='max-w-[1200px]  mx-auto mt-4 mb-12 flex justify-between gap-6 sm:flex-col md:flex-row lg:flex-row'>
 
                     <SerchBar setQuery={setQuery} />
-                    <Select />
+
                 </div>
                 <CountryList query={query} />
 
